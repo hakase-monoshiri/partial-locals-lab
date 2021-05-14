@@ -8,6 +8,11 @@
 </head>
 <body>
 
+ <%= form_tag students_path, :method => 'get'  do %>
+   Student Search:<%=  text_field_tag :query, params[:query] %>
+   <%= submit_tag "Search" %>
+ <% end %>
+
 <%= yield %>
 
 </body>
